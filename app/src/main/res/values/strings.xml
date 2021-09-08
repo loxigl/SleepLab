@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="description">Project</string>
+    <string name="Login">Авторизация</string>
+    <string name="Man">Мужской</string>
+    <string name="Woman">Женский</string>
+    <string name="Gender">Ваш пол</string>
+    <string name="YourAge">Ваш возраст</string>
+    <string name="YourName2">Ваше имя</string>
+    <string name="ComeIn">Войти</string>
+    <string name="todo">TODO</string>
+    <string name="dots"> </string>
+    <string name="dots2"> </string>
+    <string name="YourName">Как вас зовут?</string>
+</resources>
