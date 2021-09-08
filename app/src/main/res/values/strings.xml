@@ -12,4 +12,5 @@
     <string name="dots"> </string>
     <string name="dots2"> </string>
     <string name="YourName">Как вас зовут?</string>
+    <string name="todo1">TODO</string>
 </resources>
