@@ -13,4 +13,6 @@
     <string name="dots2"> </string>
     <string name="YourName">Как вас зовут?</string>
     <string name="todo1">TODO</string>
+    <string name="back">фон</string>
+    <string name="button">Button</string>
 </resources>

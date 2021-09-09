@@ -11,10 +11,13 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="401dp"
-        android:layout_height="814dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/unknown" />
@@ -45,9 +48,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
+        app:layout_constraintVertical_bias="0.311"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -63,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintVertical_bias="0.481"
         tools:ignore="TextContrastCheck" />
 
     <EditText
@@ -73,13 +77,14 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/dots"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"
+        app:layout_constraintVertical_bias="0.527"
         tools:ignore="LabelFor,TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -92,9 +97,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64"
+        app:layout_constraintVertical_bias="0.602"
         tools:ignore="TextContrastCheck" />
 
     <EditText
@@ -111,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69"
+        app:layout_constraintVertical_bias="0.652"
         tools:ignore="LabelFor,TextContrastCheck,SpeakableTextPresentCheck" />
 
     <Button
@@ -123,44 +129,48 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        style="@android:style/Widget.DeviceDefault.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.958"
-        app:srcCompat="@drawable/button3"
-        tools:srcCompat="@drawable/button3" />
+        app:layout_constraintVertical_bias="0.762" />
 
     <RadioGroup
-        android:layout_width="316dp"
-        android:layout_height="81dp"
+        android:layout_width="232dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            style="@android:style/Widget.Holo.CompoundButton.RadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:button="@drawable/button3"
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="67dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:clickable="true"
-            android:duplicateParentState="false"
-            android:scaleX="1"
-            android:scaleY="1" />
+            android:contentDescription="@string/Man"
+            android:scaleType="fitXY"
+            android:tint="#434343"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/button3"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:clickable="true"
+            android:contentDescription="@string/Woman"
+            android:scaleType="fitXY"
+            android:tint="#FFEB3B"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/button5"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+            android:focusable="true" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
