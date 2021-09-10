@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".Five"
+            android:exported="true" />
+        <activity
             android:name=".Mascot"
             android:exported="true" />
         <activity
@@ -20,12 +23,10 @@
             android:exported="true" />
         <activity
             android:name=".LoginScreen"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".MainScreen"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
