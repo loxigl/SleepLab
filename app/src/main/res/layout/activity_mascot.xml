@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/maskotbig" />
+        app:srcCompat="@drawable/ad418021a5e4b1fb" />
 
     <ImageView
         android:id="@+id/imageView7"
