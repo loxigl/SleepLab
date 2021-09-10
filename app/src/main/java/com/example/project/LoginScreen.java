@@ -29,12 +29,7 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         btn=(Button) findViewById(R.id.button);
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        Boolean check=prefs.getBoolean("userRegistered",false);
-        if (check)
-        {
-            Intent intent2 = new Intent(LoginScreen.this, MainScreen.class);
-            startActivity(intent2);
-        }
+
 
 
 

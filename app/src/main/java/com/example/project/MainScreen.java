@@ -18,11 +18,18 @@ public class MainScreen extends AppCompatActivity {
     public Boolean man;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        Boolean check1=prefs.getBoolean("userRegistered",false);
+        if (!check1)
+        {
+            Intent intentlog = new Intent(MainScreen.this, LoginScreen.class);
+            startActivity(intentlog);
+        }
         name=prefs.getString("name","");
         age=prefs.getString("age","");
         btn1=(Button)findViewById(R.id.grafButton);
@@ -31,6 +38,7 @@ public class MainScreen extends AppCompatActivity {
         TextView s=(TextView) findViewById(R.id.textView3);
         TextView s2=(TextView)findViewById(R.id.textView6);
         TextView s3=(TextView)findViewById(R.id.textView8);
+
         Boolean check=prefs.getBoolean("man",false);
         if (check)
         {
