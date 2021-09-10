@@ -1,0 +1,40 @@
+package com.example.project;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class MainScreen extends AppCompatActivity {
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        btn1=(Button)findViewById(R.id.grafButton);
+        btn2=(Button)findViewById(R.id.opthionsButton);
+        btn3=(Button)findViewById(R.id.maskotButton) ;
+        btn1.setOnClickListener(view -> {
+            Intent intent1 = new Intent (MainScreen.this, Stats.class);
+            startActivity(intent1);
+
+
+        });
+        btn2.setOnClickListener(view1 -> {
+            Intent intent2 = new Intent(MainScreen.this, Settings.class);
+            startActivity(intent2);
+
+
+        });
+        btn3.setOnClickListener(view2 -> {
+            Intent intent3 = new Intent(MainScreen.this, Mascot.class);
+            startActivity(intent3);
+
+
+        });
+    }
+}

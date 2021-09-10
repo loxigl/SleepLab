@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
-            android:name=".MainActivity2"
+            android:name=".Mascot"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Settings"
+            android:exported="true" />
+        <activity
+            android:name=".Stats"
+            android:exported="true" />
+        <activity
+            android:name=".MainScreen"
+            android:exported="true" />
+        <activity
+            android:name=".LoginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
