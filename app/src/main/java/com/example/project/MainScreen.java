@@ -1,6 +1,7 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,11 +20,28 @@ public class MainScreen extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences theme_check=getSharedPreferences("themes",MODE_PRIVATE);
+        Integer a=theme_check.getInt("theme",3);
+        switch (a) {
+            case 1:
+                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+            case 2:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            default:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_UNSPECIFIED);
+                break;
+        }
+        /* AppCompatDelegate.setDefaultNightMode(a);*/
+
+
         Boolean check1=prefs.getBoolean("userRegistered",false);
         if (!check1)
         {
@@ -74,4 +92,5 @@ public class MainScreen extends AppCompatActivity {
 
         });
     }
+
 }
