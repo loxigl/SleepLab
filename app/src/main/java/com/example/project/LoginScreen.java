@@ -78,6 +78,9 @@ public class LoginScreen extends AppCompatActivity {
        }
        Toast.makeText(this, "Пол выбран", Toast.LENGTH_SHORT).show();
    }
+    public void onBackPressed() {
+
+    }
 
 
 
