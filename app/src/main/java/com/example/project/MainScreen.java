@@ -53,22 +53,8 @@ public class MainScreen extends AppCompatActivity {
         btn1=(Button)findViewById(R.id.grafButton);
         btn2=(Button)findViewById(R.id.opthionsButton);
         btn3=(Button)findViewById(R.id.maskotButton) ;
-        TextView s=(TextView) findViewById(R.id.textView3);
-        TextView s2=(TextView)findViewById(R.id.textView6);
-        TextView s3=(TextView)findViewById(R.id.textView8);
-
-        Boolean check=prefs.getBoolean("man",false);
-        if (check)
-        {
-            s3.setText("Проходи в нашу мужскую кампанию");
-
-        }
-        else
-        {
-            s3.setText("Это клуб Без Баб, мы не любим женщин");
-        }
-        s.setText("Здравствуйте, "+name);
-        s2.setText("Вы так молодо выглядите в свои "+age);
+        TextView s=(TextView) findViewById(R.id.topmain);
+        s.setText("С возвращением, "+System.getProperty ("line.separator")+name+"!");
 
 
         btn1.setOnClickListener(view -> {
@@ -91,6 +77,9 @@ public class MainScreen extends AppCompatActivity {
 
 
         });
+    }
+    public void onBackPressed() {
+
     }
 
 }

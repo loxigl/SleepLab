@@ -20,6 +20,8 @@
         <entry key="..\:/Project/app/src/main/res/layout/activity_settings.xml" value="0.33" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_srttings.xml" value="0.3439814814814815" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_stats.xml" value="0.1" />
+        <entry key="..\:/Project/app/src/main/res/layout/activity_test.xml" value="0.3439814814814815" />
+        <entry key="..\:/Project/app/src/main/res/layout/activity_tips.xml" value="0.3314814814814815" />
         <entry key="..\:/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.35185185185185186" />
         <entry key="..\:/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.35185185185185186" />
         <entry key="..\:/Users/volko/AndroidStudioProjects/Project/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -35,7 +37,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.3314814814814815" />
       </ProjectState>
     </option>
   </component>

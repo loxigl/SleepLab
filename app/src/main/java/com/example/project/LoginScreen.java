@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatDelegate;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 
@@ -86,6 +88,51 @@ public class LoginScreen extends AppCompatActivity {
 
     }
 
+   ImageButton button;
+
+    public void onClick1(View v) {
+        SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+
+        Drawable dr = getResources().getDrawable(R.drawable.womenpress);
+        Drawable dr1=getDrawable(R.drawable.manpress);
+
+
+        switch (v.getId()) {
+            case R.id.men:
+
+                if (button == null) {
+                    button = (ImageButton) findViewById(v.getId());
+
+                } else {
+                    button.setBackgroundResource(R.drawable.press);
+                    button = (ImageButton) findViewById(v.getId());
+                }
+                button.setBackground(dr1);
+                test=true;
+                editor.putBoolean("man",true);
+                editor.apply();
+                break;
+
+
+
+            case R.id.women:
+                if (button == null) {
+                    button = (ImageButton) findViewById(v.getId());
+                } else {
+                    button.setBackgroundResource(R.drawable.press);
+                    button = (ImageButton) findViewById(v.getId());
+                }
+                button.setBackground(dr);
+                test=true;
+                editor.putBoolean("man",false);
+                editor.apply();
+
+                break;
+
+            default:
+                break;
+        }
+    }
 
 
 }
