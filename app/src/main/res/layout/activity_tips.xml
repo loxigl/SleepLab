@@ -92,18 +92,49 @@
         app:srcCompat="@drawable/mascotbig" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tip"
         android:layout_width="300dp"
         android:layout_height="86dp"
-        android:fontFamily="@font/roboto_thin"
+        android:autoText="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Сначала пройди тест"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:textStyle="bold"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/minicl1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="102dp"
+        android:layout_height="57dp"
+        android:background="#6200EA"
+        android:onClick="onClick1"
+        android:text="пройти"
+        app:layout_constraintBottom_toTopOf="@+id/cl1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <Button
+        android:id="@+id/back_tips"
+        android:layout_width="103dp"
+        android:layout_height="55dp"
+        android:background="#6200EA"
+        android:onClick="onClick1"
+        android:text="Назад"
+        app:layout_constraintBottom_toTopOf="@+id/cl1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toEndOf="@+id/go"
+        app:layout_constraintTop_toBottomOf="@+id/tip"
+        app:layout_constraintVertical_bias="0.52" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
