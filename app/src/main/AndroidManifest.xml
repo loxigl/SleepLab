@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight">
         <activity
+            android:name=".Get"
+            android:exported="true" />
+        <activity
             android:name=".Tips"
             android:exported="true" />
         <activity

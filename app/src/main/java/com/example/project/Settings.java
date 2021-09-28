@@ -9,17 +9,21 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class Settings extends AppCompatActivity {
 
     private static final String MY_PREFS_NAME ="login" ;
+    private static final String MY_PREFS_NAME2 ="Graphs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         Button btn = findViewById(R.id.reset);
+        Button btn1=findViewById(R.id.resetSleep);
+
 
 
         // SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -30,12 +34,18 @@ public class Settings extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             Intent intent = new Intent(Settings.this, LoginScreen.class);
             SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit().clear();
-            editor.clear();
+            SharedPreferences.Editor editor2=getSharedPreferences(MY_PREFS_NAME2,MODE_PRIVATE).edit().clear();
             editor.apply();
             startActivity(intent);
 
 
     });
+        btn1.setOnClickListener(view -> {
+            SharedPreferences.Editor editor2=getSharedPreferences(MY_PREFS_NAME2,MODE_PRIVATE).edit().clear();
+            Toast.makeText(Settings.this,"Успешно сброшенно",Toast.LENGTH_SHORT).show();
+            editor2.apply();
+        });
+
 
 
 
