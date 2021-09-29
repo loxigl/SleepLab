@@ -17,6 +17,7 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.BarLineChartBase;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -88,6 +89,8 @@ public class Stats extends AppCompatActivity  {
             if (y1!=99){i++;list2.add(new Entry(i1,y1)); ;}
 
         }
+        Description description=graph.getDescription();
+        description.setEnabled(false);
 
         XAxis xAxis=graph.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
