@@ -31,7 +31,7 @@ public class Get extends AppCompatActivity {
             EditText time = findViewById(R.id.sleeeptime);
             String a = time.getText().toString();
             Integer value=Integer.parseInt(a);
-            if (value>24 && value<1) {
+            if (value>24 | value<1) {
                 Toast.makeText(Get.this,"Введите правильное значение(от 1 до 24",Toast.LENGTH_LONG).show();
             }
             else{

@@ -179,7 +179,7 @@ public class Stats extends AppCompatActivity  {
         }
         sum=sum*60;
         int h=sum/list.size()/60;
-        int m=(sum%list.size())%60;
+        int m=(sum%list.size())/60;
         String res=h+" Часов   "+m+" Минут";
 
         return res;
