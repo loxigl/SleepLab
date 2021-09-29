@@ -37,15 +37,18 @@ public class LoginScreen extends AppCompatActivity {
 
 
 
+
         btn.setOnClickListener(view -> {
             Intent intent = new Intent(LoginScreen.this, MainScreen.class);
             EditText s1= findViewById(R.id.name);
             EditText s2= findViewById(R.id.age);
-            str1=s1.getText().toString();
+
+            str1 = s1.getText().toString();
             str2=s2.getText().toString();
 
 
-            if (str1.length()!=0 & str2.length()!=0 & test) {
+
+            if (str1.length()!=0 & str2.length()!=0 & test & str1.matches("[a-zA-zа-яА-Я]+")) {
                 SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
                 editor.putBoolean("userRegistered", true);
                 editor.putString("name",str1);
@@ -55,7 +58,7 @@ public class LoginScreen extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Заполни поля, имей совесть", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Поля заполнены неверно", Toast.LENGTH_SHORT).show();
             }
 
 

@@ -51,7 +51,7 @@
         android:id="@+id/addbtn"
         android:layout_width="67dp"
         android:layout_height="65dp"
-        android:autoText="true"
+        android:autoText="false"
         android:background="@color/trans"
         android:foreground="@drawable/add2"
         app:layout_constraintBottom_toBottomOf="parent"

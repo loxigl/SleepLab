@@ -1,8 +1,10 @@
 package com.example.project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -80,6 +82,27 @@ public class MainScreen extends AppCompatActivity {
     }
     public void onBackPressed() {
 
+        openQuitDialog();
+    }
+    private void openQuitDialog() {
+        AlertDialog.Builder quitDialog = new AlertDialog.Builder(
+                MainScreen.this);
+        quitDialog.setTitle("Выход: Вы уверены?");
+
+        quitDialog.setPositiveButton("Да!", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        quitDialog.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        quitDialog.show();
     }
 
 }

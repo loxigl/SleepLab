@@ -23,6 +23,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Button btn = findViewById(R.id.reset);
         Button btn1=findViewById(R.id.resetSleep);
+        Button btn2=findViewById(R.id.homebtn);
 
 
 
@@ -44,6 +45,11 @@ public class Settings extends AppCompatActivity {
             SharedPreferences.Editor editor2=getSharedPreferences(MY_PREFS_NAME2,MODE_PRIVATE).edit().clear();
             Toast.makeText(Settings.this,"Успешно сброшенно",Toast.LENGTH_SHORT).show();
             editor2.apply();
+        });
+
+        btn2.setOnClickListener(view -> {
+            Intent intent1 =new Intent(Settings.this, MainScreen.class);
+            startActivity(intent1);
         });
 
 

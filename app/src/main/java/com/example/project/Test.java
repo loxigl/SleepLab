@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -421,6 +422,15 @@ public class Test extends AppCompatActivity {
         }
         score++;
         text_score.setText(valueOf(score));
+
+    }
+    private static long back_pressed;
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода!", Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
 
     }
 }

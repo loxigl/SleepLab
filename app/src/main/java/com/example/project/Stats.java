@@ -117,21 +117,9 @@ public class Stats extends AppCompatActivity  {
         graph.setScaleEnabled(true);
         Legend legend=graph.getLegend();
         legend.setEnabled(false);
-        if (list.size()!=0) {Toast.makeText(Stats.this,average(list),Toast.LENGTH_LONG).show();}
-
-        /*ArrayList<Entry> yValues=new ArrayList<>();*/
+//        if (list.size()!=0) {Toast.makeText(Stats.this,average(list),Toast.LENGTH_LONG).show();}
 
 
-      /* int sum=0;
-        if (array!=null && !list.isEmpty()) {
-
-            for (int n = 0; n < list.size(); n++) {
-                sum += list.get(n);
-            }
-
-            int hour = sum / list.size();
-            int min = (sum % list.size()) / 60;
-        }*/
 
 
 
