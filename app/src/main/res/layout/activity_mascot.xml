@@ -143,6 +143,8 @@
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

@@ -21,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/unknown" />-->
 
-
     <View
         android:id="@+id/rectangle_3"
         android:layout_width="316dp"

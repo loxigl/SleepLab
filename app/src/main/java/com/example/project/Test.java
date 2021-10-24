@@ -62,7 +62,6 @@ public class Test extends AppCompatActivity {
                     }
 
 
-                    //Задаем действия после завершения отсчета (высвечиваем надпись "Бабах!"):
                     public void onFinish() {
                         SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
                         editor.putInt("score",score);
