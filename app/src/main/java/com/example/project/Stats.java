@@ -69,6 +69,7 @@ public class Stats extends AppCompatActivity  {
         float i1=i;
         /*int y = myPrefs.getInt("Sleep", 1);*/
         float y1=y;
+        float t=1;
 
         ArrayList<Entry> list2 = new ArrayList<>();
         ArrayList<Integer> list=new ArrayList<>();
