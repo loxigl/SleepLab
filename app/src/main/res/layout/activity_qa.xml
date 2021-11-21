@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button_back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QaA">
@@ -37,12 +38,14 @@
 
                 <TextView
                     android:id="@+id/situ"
-                    android:layout_width="208dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:paddingTop="5dp"
-                    android:text="@string/Situation" />
+                    android:paddingBottom="5dp"
+                    android:text="@string/Situation"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -53,12 +56,15 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/questions"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/q1" />
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="The situation itself"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -69,12 +75,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/sleepy"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/probability"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/Sleepy" />
+                    android:paddingTop="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/Probability"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -85,39 +96,71 @@
 
                 <Button
                     android:id="@+id/zero"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="@string/zero" />
+                    android:background="@drawable/button_answer"
+                    android:onClick="onMyClick"
+                    android:text="@string/zero"
+                    android:visibility="visible"
+                    tools:ignore="OnClick" />
 
                 <Button
                     android:id="@+id/one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="@string/one" />
+                    android:background="@drawable/button_answer"
+                    android:onClick="onMyClick"
+                    android:text="@string/one"
+                    tools:ignore="OnClick" />
 
                 <Button
                     android:id="@+id/two"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="@string/two" />
+                    android:background="@drawable/button_answer"
+                    android:onClick="onMyClick"
+                    android:text="@string/two"
+                    tools:ignore="OnClick" />
 
                 <Button
                     android:id="@+id/three"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="@string/three" />
+                    android:background="@drawable/button_answer"
+                    android:onClick="onMyClick"
+                    android:text="@string/three"
+                    tools:ignore="OnClick" />
             </LinearLayout>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/b_back"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/line6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <Button
+            android:id="@+id/back_to_maskot"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_answer"
+            android:layout_marginTop="30dp"
             android:text="@string/b_back" />
 
     </LinearLayout>
