@@ -41,6 +41,12 @@ public class Mascot extends AppCompatActivity {
                 break;
             default:
                 break;
+
+            case R.id.qaa:
+                Intent intent3 =new Intent(Mascot.this,QaA.class);
+                startActivity(intent3);
+
+                break;
         }
     }
 }
