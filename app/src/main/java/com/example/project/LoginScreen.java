@@ -1,7 +1,7 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
+
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
