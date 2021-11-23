@@ -1,12 +1,8 @@
 package com.example.project;
 
-import android.hardware.biometrics.BiometricManager;
+
 
 public class Array {
-
-    final int[] points = {
-
-    };
 
     final int[] probability = {
             R.string.q1,

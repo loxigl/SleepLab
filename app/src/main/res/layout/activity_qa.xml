@@ -103,7 +103,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_answer"
-                    android:onClick="onMyClick"
+                    android:onClick="onClick"
                     android:text="@string/zero"
                     android:visibility="visible"
                     tools:ignore="OnClick" />
@@ -116,7 +116,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_answer"
-                    android:onClick="onMyClick"
+                    android:onClick="onClick"
                     android:text="@string/one"
                     tools:ignore="OnClick" />
 
@@ -129,7 +129,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_answer"
-                    android:onClick="onMyClick"
+                    android:onClick="onClick"
                     android:text="@string/two"
                     tools:ignore="OnClick" />
 
@@ -142,7 +142,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_answer"
-                    android:onClick="onMyClick"
+                    android:onClick="onClick"
                     android:text="@string/three"
                     tools:ignore="OnClick" />
             </LinearLayout>
@@ -159,8 +159,9 @@
             android:id="@+id/back_to_maskot"
             android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_answer"
             android:layout_marginTop="30dp"
+            android:background="@drawable/button_answer"
+            android:onClick="onClick"
             android:text="@string/b_back" />
 
     </LinearLayout>
