@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainScreen extends AppCompatActivity {
@@ -27,6 +28,8 @@ public class MainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView mImageView = findViewById(R.id.imageView36);
+        mImageView.setImageResource(R.drawable.sandwiches);
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         SharedPreferences theme_check=getSharedPreferences("themes",MODE_PRIVATE);
         Integer a=theme_check.getInt("theme",3);
@@ -42,6 +45,15 @@ public class MainScreen extends AppCompatActivity {
                 break;
         }
         /* AppCompatDelegate.setDefaultNightMode(a);*/
+
+        int abc = -100;
+
+        if (abc < 0) {
+            mImageView.setImageResource(R.drawable.vodka);
+        }
+        if (abc > 0) {
+            mImageView.setImageResource(R.drawable.olives);
+        }
 
 
         Boolean check1=prefs.getBoolean("userRegistered",false);
