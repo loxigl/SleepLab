@@ -54,13 +54,13 @@ public class Stats extends AppCompatActivity  {
         setContentView(R.layout.activity_stats);
         Button btn=findViewById(R.id.five);
         Button add=findViewById(R.id.addbtn);
-        LineChart graph=findViewById(R.id.graph);
+        BarChart graph=findViewById(R.id.graph);
         Intent intent2=getIntent();
         int value=intent2.getIntExtra("value",0);
         SharedPreferences  myPrefs = getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
-        Type listOfObjects = new TypeToken<ArrayList<Entry>>(){}.getType();
+        Type listOfObjects = new TypeToken<ArrayList<BarEntry>>(){}.getType();
         Type listOfObjects1 = new TypeToken<ArrayList<Integer>>(){}.getType();
         String json = myPrefs.getString("MyList", null);
         String array=myPrefs.getString("Array",null);
@@ -71,13 +71,13 @@ public class Stats extends AppCompatActivity  {
         float y1=y;
         float t=1;
 
-        ArrayList<Entry> list2 = new ArrayList<>();
+        ArrayList<BarEntry> list2 = new ArrayList<>();
         ArrayList<Integer> list=new ArrayList<>();
 
 
         if (array!=null){
         list=gson.fromJson(array,listOfObjects1);}
-        if (y!=99){list.add(i,y);list2.add(new Entry(i,y));}
+        if (y!=99){list.add(i,y);list2.add(new BarEntry(i,y));}
 
 
         if (json==null) {
@@ -87,7 +87,7 @@ public class Stats extends AppCompatActivity  {
         else
         {
             list2=gson.fromJson(json,listOfObjects);
-            if (y1!=99){i++;list2.add(new Entry(i1,y1)); ;}
+            if (y1!=99){i++;list2.add(new BarEntry(i1,y1)); ;}
 
         }
         Description description=graph.getDescription();
@@ -129,7 +129,7 @@ public class Stats extends AppCompatActivity  {
 
 
 
-        LineDataSet set1=new LineDataSet(list2,"Data Set 1");
+        BarDataSet set1=new BarDataSet(list2,"Data Set 1");
         set1.setColor(Color.RED);
         String strObject = gson.toJson(list2, listOfObjects);
         String jarray=gson.toJson(list,listOfObjects1);
@@ -139,10 +139,10 @@ public class Stats extends AppCompatActivity  {
         prefsEditor.putInt("day",i);
         prefsEditor.apply();
 
-        ArrayList<ILineDataSet> dataSets=new ArrayList<>();
+        ArrayList<IBarDataSet> dataSets=new ArrayList<>();
         dataSets.add(set1);
 
-        LineData data =new LineData(dataSets);
+        BarData data =new BarData(dataSets);
 
         graph.setData(data);
         graph.invalidate();
