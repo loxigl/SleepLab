@@ -54,7 +54,7 @@ public class Test extends AppCompatActivity {
                 view.setVisibility(View.GONE);
                 pos8.setClickable(true);
                 pos8.setImageResource(R.drawable.mascot_game);
-                new CountDownTimer(60000, 1000) {
+                new CountDownTimer(20000, 1000) {
 
                     //Здесь обновляем текст счетчика обратного отсчета с каждой секундой
                     public void onTick(long millisUntilFinished) {
