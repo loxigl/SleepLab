@@ -74,7 +74,14 @@ public class QaA extends AppCompatActivity {
 
                     editor.putInt("Score",score);
                     editor.apply();
-                    dialog.setMessage("Ваши баллы: "+score);
+                    if (score<=8 ) {
+                        dialog.setMessage("Сонливость в пределах нормы");
+
+                    }
+                    else
+                    {
+                        dialog.setMessage("Аномальная сонливость, будте осторожны");
+                    }
                     AlertDialog dialog1= dialog.create();
                     dialog1.show();
                 }
@@ -90,7 +97,14 @@ public class QaA extends AppCompatActivity {
 
                     editor.putInt("Score",score);
                     editor.apply();
-                    dialog.setMessage("Ваши баллы: "+score);
+                    if (score<=8 ) {
+                        dialog.setMessage("Сонливость в пределах нормы");
+
+                    }
+                    else
+                    {
+                        dialog.setMessage("Аномальная сонливость, будте осторожны");
+                    }
                     AlertDialog dialog1= dialog.create();
                     dialog1.show();
                 }
@@ -106,7 +120,14 @@ public class QaA extends AppCompatActivity {
 
                     editor.putInt("Score",score);
                     editor.apply();
-                    dialog.setMessage("Ваши баллы: "+score);
+                    if (score<=8 ) {
+                        dialog.setMessage("Сонливость в пределах нормы");
+
+                    }
+                    else
+                    {
+                        dialog.setMessage("Аномальная сонливость, будте осторожны");
+                    }
                     AlertDialog dialog1= dialog.create();
                     dialog1.show();
                 }
@@ -122,7 +143,14 @@ public class QaA extends AppCompatActivity {
 
                     editor.putInt("Score",score);
                     editor.apply();
-                    dialog.setMessage("Ваши баллы: "+score);
+                    if (score<=8 ) {
+                        dialog.setMessage("Сонливость в пределах нормы");
+
+                    }
+                    else
+                    {
+                        dialog.setMessage("Аномальная сонливость, будте осторожны");
+                    }
                     AlertDialog dialog1= dialog.create();
                     dialog1.show();
                 }
