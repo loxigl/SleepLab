@@ -42,6 +42,30 @@ public class Test extends AppCompatActivity {
         ImageView pos12=findViewById(R.id.pos12);
         TextView text_score=findViewById(R.id.score);
 
+        pos1.setImageResource(R.color.trans);
+        pos1.setClickable(false);
+        pos2.setImageResource(R.color.trans);
+        pos2.setClickable(false);
+        pos3.setImageResource(R.color.trans);
+        pos3.setClickable(false);
+        pos4.setImageResource(R.color.trans);
+        pos4.setClickable(false);
+        pos5.setImageResource(R.color.trans);
+        pos5.setClickable(false);
+        pos6.setImageResource(R.color.trans);
+        pos6.setClickable(false);
+        pos7.setImageResource(R.color.trans);
+        pos7.setClickable(false);
+        pos8.setImageResource(R.color.trans);
+        pos8.setClickable(false);
+        pos9.setImageResource(R.color.trans);
+        pos10.setClickable(false);
+        pos10.setImageResource(R.color.trans);
+        pos11.setImageResource(R.color.trans);
+        pos11.setClickable(false);
+        pos12.setImageResource(R.color.trans);
+        pos12.setClickable(false);
+
 
 
 
