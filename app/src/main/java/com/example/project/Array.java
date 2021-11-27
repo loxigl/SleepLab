@@ -14,4 +14,10 @@ public class Array {
             R.string.q7,
             R.string.q8,
     };
+
+    final int[] tips = {
+            R.string.t1,
+            R.string.t2,
+            R.string.t3,
+    };
 }
