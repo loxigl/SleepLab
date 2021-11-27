@@ -52,6 +52,7 @@ public class Stats extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+        ArrayList<IBarDataSet> dataSets=new ArrayList<>();
         Button btn=findViewById(R.id.five);
         Button add=findViewById(R.id.addbtn);
         BarChart graph=findViewById(R.id.graph);
@@ -59,8 +60,9 @@ public class Stats extends AppCompatActivity  {
         int value=intent2.getIntExtra("value",0);
         SharedPreferences  myPrefs = getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
         GsonBuilder builder = new GsonBuilder();
+        builder.serializeSpecialFloatingPointValues();
         Gson gson = builder.create();
-        Type listOfObjects = new TypeToken<ArrayList<BarEntry>>(){}.getType();
+        Type iBarDataSetType = new TypeToken<ArrayList<IBarDataSet>>(){}.getType();
         Type listOfObjects1 = new TypeToken<ArrayList<Integer>>(){}.getType();
         String json = myPrefs.getString("MyList", null);
         String array=myPrefs.getString("Array",null);
@@ -73,11 +75,12 @@ public class Stats extends AppCompatActivity  {
 
         ArrayList<BarEntry> list2 = new ArrayList<>();
         ArrayList<Integer> list=new ArrayList<>();
+        ArrayList<IBarDataSet> iBarDataSets=new ArrayList<>();
 
 
         if (array!=null){
         list=gson.fromJson(array,listOfObjects1);}
-        if (y!=99){list.add(i,y);list2.add(new BarEntry(i,y));}
+        if (y!=99){list.add(i,y);}
 
 
         if (json==null) {
@@ -86,7 +89,7 @@ public class Stats extends AppCompatActivity  {
         }
         else
         {
-            list2=gson.fromJson(json,listOfObjects);
+            dataSets=gson.fromJson(json,iBarDataSetType);
             if (y1!=99){i++;list2.add(new BarEntry(i1,y1)); ;}
 
         }
@@ -131,21 +134,19 @@ public class Stats extends AppCompatActivity  {
 
         BarDataSet set1=new BarDataSet(list2,"Data Set 1");
         set1.setColor(Color.RED);
-        String strObject = gson.toJson(list2, listOfObjects);
-        String jarray=gson.toJson(list,listOfObjects1);
-        SharedPreferences.Editor prefsEditor = myPrefs.edit();
-        prefsEditor.putString("MyList", strObject);
-        prefsEditor.putString("Array",jarray);
-        prefsEditor.putInt("day",i);
-        prefsEditor.apply();
-
-        ArrayList<IBarDataSet> dataSets=new ArrayList<>();
         dataSets.add(set1);
-
         BarData data =new BarData(dataSets);
 
         graph.setData(data);
         graph.invalidate();
+
+        String jarray=gson.toJson(list,listOfObjects1);
+        SharedPreferences.Editor prefsEditor = myPrefs.edit();
+        prefsEditor.putString("Array",jarray);
+        prefsEditor.putInt("day",i);
+        prefsEditor.apply();
+        String strObject = gson.toJson(dataSets, iBarDataSetType);
+        prefsEditor.putString("MyList", strObject);
 
         add.setOnClickListener(view -> {
             Intent intent1=new Intent(Stats.this,Get.class);
@@ -162,7 +163,7 @@ public class Stats extends AppCompatActivity  {
         Intent bruh=new Intent(Stats.this, MainScreen.class);
         startActivity(bruh);
     }
-    static String average (ArrayList<Integer> list) {
+    /*static String average (ArrayList<Integer> list) {
 
         int sum = 0;
 
@@ -175,5 +176,5 @@ public class Stats extends AppCompatActivity  {
         String res=h+" Часов   "+m+" Минут";
 
         return res;
-    }
+    }*/
 }

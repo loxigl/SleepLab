@@ -20,11 +20,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Test extends AppCompatActivity {
     int b=0;
-    int score=0;
+    int score;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        score=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         TextView timer=findViewById(R.id.timer);
@@ -89,6 +90,7 @@ public class Test extends AppCompatActivity {
                     public void onFinish() {
                         SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
                         editor.putInt("score",score);
+                        editor.apply();
                         Intent intent=new Intent(Test.this, Tips.class);
                         intent.putExtra("score",score);
                         startActivity(intent);

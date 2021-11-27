@@ -49,4 +49,10 @@ public class Mascot extends AppCompatActivity {
                 break;
         }
     }
+    public void onBackPressed() {
+        // super.onBackPressed();
+        Intent intent=new Intent(Mascot.this,MainScreen.class);
+        startActivity(intent);
+
+    }
 }
