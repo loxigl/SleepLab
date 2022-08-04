@@ -2,19 +2,55 @@ package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.view.ViewDebug;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class Tips extends AppCompatActivity {
+
+    Dialog dialog;
+
+    //public int num;
+
+    //Array array = new Array();
+    //Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //final TextView text_for_dialog = findViewById(R.id.tip_dialog);
+
+        //num = random.nextInt(3);
+        //text_for_dialog.setText(array.tips[num]);
+
+        dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_tips);
+        dialog.setCancelable(false);
+
+        TextView btnclose = (TextView) dialog.findViewById(R.id.btn_close);
+        btnclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+        //if (score != 0) {
+        //    dialog.show();
+        //}
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips);
         Button btn1=findViewById(R.id.back_tips);
@@ -47,6 +83,7 @@ public class Tips extends AppCompatActivity {
             }
         }
 
+
     }
 
     @Override
@@ -72,4 +109,5 @@ public class Tips extends AppCompatActivity {
         }
 
     }
+
 }
